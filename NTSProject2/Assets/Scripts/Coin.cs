@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public int pointValue = 10;  // Chaque pièce vaut 10 points
+    public int pointValue = 10;  // Chaque piece vaut 10 points
 
     private void Start()
     {
