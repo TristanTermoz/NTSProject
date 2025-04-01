@@ -6,24 +6,6 @@
             "id": "f99c810e-4ed6-4c93-8ec2-c51c476effea",
             "actions": [
                 {
-                    "name": "Space",
-                    "type": "Button",
-                    "id": "378278fc-2040-4f4a-a50f-1de792c816d4",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Horizontal",
-                    "type": "Button",
-                    "id": "634487d1-e9ef-4581-9028-4f024d1d73d9",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "TouchPress",
                     "type": "PassThrough",
                     "id": "2b503295-3936-4f76-8400-a29444266f9b",
@@ -40,62 +22,9 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "TouchPhase",
-                    "type": "Button",
-                    "id": "6c7ff285-f04e-4a37-8954-2c206da3ebe8",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "32ae7dc0-3e7c-40bb-be1f-cfa19b46ccad",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Space",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "f2d098b5-30ec-4616-aff2-7f6ab445cdfa",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Horizontal",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "b684f703-839e-4171-afab-96be708664a7",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Horizontal",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "ed47eae9-8496-4b18-a0b8-ffcb7001dc62",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Horizontal",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
                 {
                     "name": "",
                     "id": "c114614c-608f-4748-abfb-ffbbd9f7c814",
@@ -115,17 +44,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "TouchPos",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6765daf8-11c0-4df1-8485-329839bbc5ea",
-                    "path": "Touchscreen/Primary Touch/Touch Phase",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TouchPhase",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
