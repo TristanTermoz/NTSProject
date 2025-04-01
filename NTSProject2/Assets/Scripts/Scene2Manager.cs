@@ -1,4 +1,3 @@
-using System.Collections.Generic; 
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
@@ -6,8 +5,8 @@ using TMPro;
 public class Scene2Manager : MonoBehaviour
 {
     public PlayerInput PlayerInput;
-    public GameObject CoinExplosionPrefab; 
-    public TMP_Text scoreText;  
+    public TextMeshProUGUI scoreText;  
+    public GameObject CoinExplosionPrefab;  
 
     private InputAction touchPressAction;
     private InputAction touchPosAction;
@@ -21,12 +20,18 @@ public class Scene2Manager : MonoBehaviour
             return;
         }
 
-        PlayerInput.enabled = true;
+        if (scoreText == null)
+        {
+            Debug.LogError("ScoreText UI element is not assigned!");
+            return;
+        }
 
+        PlayerInput.enabled = true;
         touchPressAction = PlayerInput.actions["TouchPress"];
         touchPosAction = PlayerInput.actions["TouchPos"];
 
         score = 0;
+        scoreText.text = "Score: " + score;
 
         if (touchPressAction == null || touchPosAction == null)
         {
@@ -51,17 +56,22 @@ public class Scene2Manager : MonoBehaviour
             {
                 CollectCoin(hit.collider.gameObject);
             }
+            else
+            {
+                Debug.Log("Touched something other than a coin.");
+            }
+        }
+        else
+        {
+            Debug.Log("No object detected at touch position.");
         }
     }
 
     private void CollectCoin(GameObject coin)
     {
-        Coin coinScript = coin.GetComponent<Coin>();
-        if (coinScript != null)
-        {
-            score += coinScript.pointValue;
-            scoreText.text = "Score: " + score;
-        }
+        score += 10;  // ✅ Chaque pièce donne 10 points
+        scoreText.text = "Score: " + score;
+        Debug.Log("Collected a coin! New Score: " + score);
 
         if (CoinExplosionPrefab != null)
         {

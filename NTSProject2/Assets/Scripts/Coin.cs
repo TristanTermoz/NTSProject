@@ -1,29 +1,23 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public int pointValue; 
-    public List<Material> materials; 
+    public int pointValue = 10;  // Chaque pièce vaut 10 points
 
     private void Start()
     {
+        if (GetComponent<MeshRenderer>() == null)
+        {
+            Debug.LogError("Coin is missing MeshRenderer!");
+        }
+
         if (GetComponent<Collider>() == null)
         {
-            gameObject.AddComponent<SphereCollider>().isTrigger = true;
+            SphereCollider collider = gameObject.AddComponent<SphereCollider>();
+            collider.isTrigger = true;  
         }
-    }
 
-    public void AssignRandomMaterial()
-    {
-        if (materials.Count > 0)
-        {
-            int randomIndex = Random.Range(0, materials.Count);
-            GetComponent<MeshRenderer>().material = materials[randomIndex];
-
-            
-            pointValue = (randomIndex + 1) * 10;  
-        }
+        gameObject.tag = "Coin";  // Assigne le bon tag pour le raycast
     }
 }
 

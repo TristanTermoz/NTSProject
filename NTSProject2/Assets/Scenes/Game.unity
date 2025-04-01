@@ -216,8 +216,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoinPrefab: {fileID: 5345561989469597804, guid: 26eee61b1468af648b7b08f3d9a2182a, type: 3}
   camTransform: {fileID: 620212983}
-  CoinNumber: 20
-  SpawnRange: 10
+  CoinNumber: 50
+  SpawnRange: 1
+  CoinMaterials:
+  - {fileID: 2100000, guid: 4ad0ee10e39c31c4f986d1af7eafab47, type: 2}
+  - {fileID: 2100000, guid: 6687ad92642341a4ab9657ee155d2061, type: 2}
+  - {fileID: 2100000, guid: c0f35fdecca44bc4dba56e720ae21dc3, type: 2}
+  - {fileID: 2100000, guid: 4fcefcd31856bf349b0a357369fcf920, type: 2}
 --- !u!1 &178848177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,18 +1084,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e5943db7c2f2cd4c8db3f12d0b847d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RaycastManager: {fileID: 133730081}
-  TypeToTrack: 2
-  CoinPrefab: {fileID: 5345561989469597804, guid: 26eee61b1468af648b7b08f3d9a2182a, type: 3}
   PlayerInput: {fileID: 1411260643}
-  CoinMaterials:
-  - {fileID: 2100000, guid: 4ad0ee10e39c31c4f986d1af7eafab47, type: 2}
-  - {fileID: 2100000, guid: 6687ad92642341a4ab9657ee155d2061, type: 2}
-  - {fileID: 2100000, guid: c0f35fdecca44bc4dba56e720ae21dc3, type: 2}
-  - {fileID: 2100000, guid: 4fcefcd31856bf349b0a357369fcf920, type: 2}
-  CoinExplosionPrefab: {fileID: 4770900713417016435, guid: 799ddfb58fb5b674aa96769c9081685b, type: 3}
   scoreText: {fileID: 956488950}
-  pointValue: 0
+  CoinExplosionPrefab: {fileID: 4770900713417016435, guid: 799ddfb58fb5b674aa96769c9081685b, type: 3}
 --- !u!4 &1357255376
 Transform:
   m_ObjectHideFlags: 0
